@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Product info</title>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons'>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/vuetify@1.4.2/dist/vuetify.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="style_pi.css">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <div id="app" class="body">
+        <v-app id="inspire">
+            <v-container grid-list-md text-xs-center>
+                <v-layout row wrap>
+                    <v-flex xs5>
+                        <v-card>
+                            <v-img id="product-img" src="RecondComputer.png" height="100%"
+                                class="grey darken-4"></v-img>
+                        </v-card>
+
+                    </v-flex>
+                    <v-flex xs7 pl-5 class="d-flex text-xs-left">
+                        <div class="product-summary">
+                            <h2 class="product-title">Atari Reconditioned US 800XL computer CB101939RO</h2>
+                            <div class="user-ratings">
+                                <div class="star-rating">
+                                    <span style="width:100%"></span>
+                                </div>
+                                <a href="#reviews" class="total-review" rel="nofollow">(<span class="count"> 200 </span>
+                                    customer
+                                    review)</a>
+                            </div>
+                            <div class="price">
+                                <h3>
+                                    <span>RM</span>
+                                    550.90
+                                </h3>
+                                <del>RM 899</del>
+                            </div>
+                            <div class="prodect-details">
+                                <h3>Product Details</h3>
+                                <p>
+                                    The Atari Reconditioned US 800XL computer, model CB101939RO, is a refurbished
+                                    version of the classic Atari 800XL home
+                                    computer. Featuring improved reliability and performance, this reconditioned unit
+                                    offers the nostalgic experience of
+                                    retro computing with modern reliability. Ideal for enthusiasts, collectors, or those
+                                    seeking a vintage computing experience,
+                                    it provides access to a vast library of classic software and games from the Atari
+                                    era.</p>
+                            </div>
+
+
+                            <div class="buy-product">
+                                <div class="stock">
+                                    <v-btn color="#4CAF50" dark>IN STOCKS
+                                        <v-icon dark right>check_circle</v-icon>
+                                    </v-btn>
+                                </div>
+                                <div class="product-qty">
+                                    <div class="cart-btn">
+                                        <!-- Add to Cart form -->
+                                        <form method="post" action="add_to_cart.php">
+                                          <input type="hidden" name="item_id" value="6"> <!-- Use the actual product ID here -->
+                                          <button type="submit" class="v-btn cart-btn px-5" color="error">
+                                            <i class="fa fa-shopping-cart"></i> ADD TO CART
+                                          </button>
+                                        </form>
+                                        <v-btn class="cart-btn px-5" color="error"><a href="checkout-page.html">BUY NOW</a></v-btn>
+                                      </div>
+                                    <button><i class="fa fa-heart" aria-hidden="true"></i> ADD TO WISHLIST</button>
+                                    <ul class="socal-link">
+                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </v-flex>
+
+
+
+                </v-layout>
+            </v-container>
+        </v-app>
+    </div>
+    <!-- partial -->
+    <script src='https://cdn.jsdelivr.net/npm/babel-polyfill/dist/polyfill.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/vuetify@1.4.2/dist/vuetify.min.js'></script>
+    <script src="script_pi.js"></script>
+
+</body>
+
+</html>

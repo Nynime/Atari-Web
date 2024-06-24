@@ -1,0 +1,260 @@
+body {
+	background: #ecf0f9;
+	color: #2f3d49;
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+	font-size: 1.1rem;
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #adc7cb;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h3 {
+	color: #4b858e;
+}
+
+.header {
+	background: #fff;
+	height: 90px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.header-inner {
+	margin: auto;
+	padding: 0;
+	width: 700px;
+}
+
+.logo {
+	margin-top: 0px;
+	width: 200px;
+}
+
+.heading {
+	margin: auto ;
+	max-width: 700px;
+}
+
+.margin-bottom-0 {
+	margin-bottom: 0;
+}
+
+.left-20 {
+	margin-left: 20px;
+}
+
+.hr {
+	border-bottom: 2px solid #ddd;
+	padding: 10px;
+	width: 97%;
+}
+
+.title {
+	display: inline-;
+}
+
+.float-rt {
+	float:right;
+}
+
+.margin-0 {
+	margin-top: 0;
+}
+
+.margin-20 {
+	margin-top: 20px;
+}
+
+.margin-40 {
+	margin-top: 40px;
+}
+
+.no-top-pad {
+	padding-top: 0;
+}
+
+.pad-left {
+	padding-left: 80%;
+}
+
+.inline {
+	display: inline-block;
+	width: 48%;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+ul.leaders {
+    max-width: 40em;
+    padding: 0;
+	margin-top: 0;
+    overflow-x: hidden;
+    list-style: none}
+ul.leaders li:before {
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    content:
+ " "
+ " "
+ ""
+ ""}
+ul.leaders span:first-child {
+    padding-right: 0.33em;
+    background: #fff}
+ul.leaders span + span {
+    float: right;
+    padding-left: 0.33em;
+    background: #fff}
+
+ul.leaders li {
+	margin-top: 12px;
+}
+
+.card {
+	background: #fff;
+	border-radius: 2px;
+	box-shadow: 0 2px 8px 1px #ccc;
+	margin: 70px auto 0;
+	max-width: 620px;
+	padding: 40px;
+}
+
+.three-column {
+	display: grid;
+    grid-template-columns: 3fr .75fr .75fr;
+    grid-gap: 20px;
+}
+
+.mc {
+	float:right;
+}
+
+.mc img {
+	width: 40px;
+}
+
+.base-label {
+    color: #4d4d4d;
+    cursor: text;
+    display: block;
+	font-weight: 600;
+    margin-bottom: 6px;
+	text-transform: uppercase;
+    -webkit-transition: display .3s ease-out;
+    transition: display .3s ease-out;
+    font-size: 12px;
+}
+
+.grid-container {
+	background: #fff;
+  display: grid;
+  grid-template-columns: 80% 19%;
+  grid-template-rows: 48px 48px;
+  gap: 1px 1px;
+  grid-template-areas: "Label-1 Text-1" "Label-2 Text-2";
+}
+
+.Label-1 { grid-area: Label-1;}
+.Text-1 { grid-area: Text-1; }
+.Label-2 { grid-area: Label-2; }
+.Text-2 { grid-area: Text-2; }
+.Label-3 { grid-area: Label-3; }
+.Text-3 { grid-area: Text-3; }
+
+.label-cell {
+	border-top: 2px solid #ddd;
+	padding: 12px 0;
+}
+
+.label-cell-left {
+	padding-top: 18px;
+}
+
+.order-details {
+	margin-top: 0;
+	float:right;
+}
+
+.store-badge {
+	width: 120px;
+}
+
+
+
+.footer {
+	background: #2f3d49;
+	height: 60px;
+	margin-top: 100px;
+	width: 100%
+}
+
+.footer-info {
+	color: #fff;
+	font-size: 13px;
+	margin: auto;
+	padding-top: 22px;
+	max-width: 700px;
+}
+
+.zigzag-bottom {
+  position: relative;
+  z-index: 1;
+  position: relative;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  border-bottom: 15px solid transparent;
+  margin-bottom: -15px;
+  -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.15) 0px 1px 2px);
+          filter: drop-shadow(rgba(0, 0, 0, 0.15) 0px 1px 2px);
+  background-color: #fff;
+	height: 20px;
+	width: 700px;
+	margin: auto;
+}
+
+.zigzag-bottom:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 15px;
+  bottom: -15px;
+  left: 0;
+  color: #fff;
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 33.333%, 33.333%, currentColor 66.667%, rgba(0, 0, 0, 0) 66.667%), linear-gradient(-45deg, rgba(0, 0, 0, 0) 33.333%, 33.333%, currentColor 66.667%, rgba(0, 0, 0, 0) 66.667%);
+  background-size: 30px 60px;
+  background-position: 50% -45px;
+  background-repeat: repeat-x;
+  z-index: 1;
+}
+
+
+@media only screen and (max-width: 600px) {
+  body {
+	  margin: 0;
+    padding: 0 20px 0;
+  }
+	.logo {
+		margin-left: 20px
+	}
+	.inline {
+		width: 100%;
+	}
+
+}
