@@ -1,0 +1,144 @@
+html, body {
+	background-image: url('cover.jpg');
+	height: 100%;
+	h1 {
+		text-align: center;
+	  }
+
+	  p {
+		text-align: center;
+	  }
+  }
+  
+  body {
+	margin: 0;
+	font-family: sans-serif;
+  }
+  
+  .visually-hidden {
+	position: fixed;
+	top: 0;
+	right: 100%;
+  }
+  
+
+.faq-container {
+	width: 90%; /* Adjust the width as desired */
+	margin: 0 auto; /* Center the container horizontally */
+}
+
+  
+  .targets {
+	position: absolute;
+	top: 0;
+  }
+  
+  .switch--button {
+	text-decoration: none;
+	display: inline-block;
+  margin: 0.5rem 0; /* Adjust the spacing between elements */
+	padding: 1em 1.5em;
+	color: #333;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.125em;
+	background-color: #bdd6eb;
+  }
+  /* This is a for Question Section 2 */
+  #faq-group-2:not(:target) ~ .faq-content .button--group-2,
+  #faq-group-2:target ~ .faq-content .button--group-1 {
+	background-color: #ecf8f7;
+  }
+  
+  #faq-group-2:target ~ .faq-content .list--group-1,
+  #faq-group-2:not(:target) ~ .faq-content .list--group-2 {
+	display: none;
+  }
+  
+/* This is for Question Section 3*/
+#faq-group-3:not(:target) ~ .faq-content .button--group-3,
+#faq-group-3:target ~ .faq-content .button--group-1,
+#faq-group-3:target ~ .faq-content .button--group-2,
+#faq-group-3:target ~ .faq-content .button--group-4,
+#faq-group-3:target ~ .faq-content .button--group-5 {
+	background-color: #ecf8f7;
+}
+
+#faq-group-3:target ~ .faq-content .list--group-1,
+#faq-group-3:not(:target) ~ .faq-content .list--group-3,
+#faq-group-3:target ~ .faq-content .list--group-2,
+#faq-group-3:target ~ .faq-content .list--group-4,
+#faq-group-3:target ~ .faq-content .list--group-5 {
+	display: none;
+} 
+
+  /* This is for Question Section 4 */
+  #faq-group-4:not(:target) ~ .faq-content .button--group-4,
+  #faq-group-4:target ~ .faq-content .button--group-1,
+  #faq-group-4:target ~ .faq-content .button--group-2,
+  #faq-group-4:target ~ .faq-content .button--group-3,
+  #faq-group-4:target ~ .faq-content .button--group-5 {
+	background-color: #ecf8f7;
+  }
+  
+  #faq-group-4:target ~ .faq-content .list--group-1,
+  #faq-group-4:target ~ .faq-content .list--group-2,
+  #faq-group-4:not(:target) ~ .faq-content .list--group-4,
+  #faq-group-4:target ~ .faq-content .list--group-3,
+  #faq-group-4:target ~ .faq-content .list--group-5 {
+	  display: none;
+  }
+
+  /* This is for Question Section 5*/
+  #faq-group-5:not(:target) ~ .faq-content .button--group-5,
+  #faq-group-5:target ~ .faq-content .button--group-1,
+  #faq-group-5:target ~ .faq-content .button--group-2,
+  #faq-group-5:target ~ .faq-content .button--group-3,
+  #faq-group-5:target ~ .faq-content .button--group-4 {
+	  background-color: #ecf8f7;
+  }
+  
+  #faq-group-5:target ~ .faq-content .list--group-1,
+  #faq-group-5:target ~ .faq-content .list--group-2,
+  #faq-group-5:target ~ .faq-content .list--group-3,
+  #faq-group-5:not(:target) ~ .faq-content .list--group-5,
+  #faq-group-5:target ~ .faq-content .list--group-4 {
+	  display: none;
+  }
+  
+  .faq--list {
+	list-style: none;
+	margin: 0;
+	padding: 2em 0;
+  }
+  
+  .faq--item {
+	background-color: #f3fdfe;
+  }
+  
+  .faq--item + .faq--item {
+	margin-top: 1em;
+  }
+  
+  .faq--question {
+	display: block;
+	padding: 0.5em;
+	font-weight: bold;
+	cursor: pointer;
+  }
+  
+  .faq--answer {
+	display: none;
+	color: #444;
+	padding: 0 0.5em 0.5em;
+  }
+  
+  [type="checkbox"]:checked ~ .faq--answer {
+	display: block;
+  }
+  
+  code {
+	font-size: 1.325rem;
+	color: #909;
+  }
+  

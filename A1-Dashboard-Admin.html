@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Atari (admin)</title>
+    <link rel="stylesheet" href="A1-Sytle_Dashboard-M.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="apexcharts.min.js"></script>
+    <script src="A1-DashboardAdmin_script.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="A1-Dashboard-Admin.html">ATARI</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="A1-Dashboard-Admin.html">Home</a></li>
+                    <li><a href="AboutUs-Admin.html">About</a></li>
+                    <li><a href="Catalog-Admin.html">Catalog</a></li>
+                    <li><a href="Contact-Admin.html">Contact</a></li>
+                    <li><a href="Feedback-Admin.html">Feedback</a></li>
+                    <li><a href="FAQ-Admin.html">FAQs</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage Records<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><button onclick="window.location.href='manage_usersforAdmin.php'">View/Manage Users Records</button></li>
+                            <li><button onclick="window.location.href='manage_productsAdmin.php'">View/Manage Products Records</button></li>
+                        </ul>
+                    </li>
+                   
+                    <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                    <li><a href="manage_admin.php"><span class="fas fa-cog"></span> Manage Admin</a></li>
+                </ul>
+            </div>
+            <!-- Search bar -->
+            <li>
+                <form class="navbar-form" action="browse_items_admin.php" method="GET" style="display: flex;">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search" name="query">
+                    </div>
+                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                </form>
+            </li>
+        </div>
+    </nav>
+    <div class="bodyBG">
+        <div class="jumbotron">
+            <div class="container text-center">
+                <h2 style="color:#ffff; text-shadow: 4px 4px 4px #000;">Specializing in Replacement Parts &
+                    <br>Accessories for
+                    all Consumer Based Atari <br>Game Systems & Atari Computers
+                </h2>
+                <br><br>
+            </div>
+        </div>
+        <div class="SalesBG">
+            <blockquote>
+                <div class="container-fluid">
+                    <!--  Row 1 -->
+                    <div class="row">
+                        <div class="col-lg-8 d-flex align-items-strech">
+                            <div class="card w-100">
+                                <div class="card-body">
+                                    <div class="d-sm-flex d-block align-items-center justify-content-between mb-9">
+                                        <div class="mb-3 mb-sm-0">
+                                            <h5 class="card-title fw-semibold">Sales Overview</h5>
+                                        </div>
+                                        <div>
+                                            <select class="form-select">
+                                                <option value="1">March 2023</option>
+                                                <option value="2">April 2023</option>
+                                                <option value="3">May 2023</option>
+                                                <option value="4">June 2023</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div id="chart"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <!-- Yearly Breakup -->
+                                    <div class="card overflow-hidden">
+                                        <div class="card-body p-4">
+                                            <h5 class="card-title mb-9 fw-semibold">Yearly Breakup</h5>
+                                            <div class="row align-items-center">
+                                                <div class="col-8">
+                                                    <h4 class="fw-semibold mb-3">RM336,358</h4>
+                                                    <div class="d-flex align-items-center mb-3">
+                                                        <span
+                                                            class="me-1 rounded-circle bg-light-success round-20 d-flex align-items-center justify-content-center">
+                                                            <i class="ti ti-arrow-up-left text-success"></i>
+                                                        </span>
+                                                        <p class="text-dark me-1 fs-3 mb-0">&#8593 +9%</p>
+                                                        <p class="fs-3 mb-0">last year</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="d-flex justify-content-center">
+                                                        <div id="breakup"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <!-- Monthly Earnings -->
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row align-items-start">
+                                                <div class="col-8">
+                                                    <h5 class="card-title mb-9 fw-semibold"> Monthly Earnings </h5>
+                                                    <h4 class="fw-semibold mb-3">RM16,820</h4>
+                                                    <div class="d-flex align-items-center pb-1">
+                                                        <span
+                                                            class="me-2 rounded-circle bg-light-danger round-20 d-flex align-items-center justify-content-center">
+                                                            <i class="ti ti-arrow-down-right text-danger"></i>
+                                                        </span>
+                                                        <p class="text-dark me-1 fs-3 mb-0">&#8595 +9%</p>
+                                                        <p class="fs-3 mb-0">last year</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="d-flex justify-content-end">
+                                                        <div
+                                                            class="text-white bg-secondary rounded-circle p-6 d-flex align-items-center justify-content-center">
+                                                            <i class="ti ti-currency-dollar fs-6"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="earning"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </blockquote>
+        </div>
+        <div class="SalesBG">
+            <blockquote>
+             
+                    <!-- Transaction Records and Reports -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-semibold">Transaction Records</h5>
+                                    <form id="transactionForm">
+                                        <div class="form-group">
+                                            <label for="dateRange">Select Date Range:</label>
+                                            <select class="form-control" id="dateRange">
+                                                <option value="daily">Daily</option>
+                                                <option value="weekly">Weekly</option>
+                                                <option value="monthly">Monthly</option>
+                                            </select>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" onclick="fetchTransactions()">View
+                                            Transactions</button>
+                                            <button id="fetch-transactions" class="btn btn-primary">Generate Report</button>
+                                    </form>
+                                    <div id="transactionRecords" class="mt-4">
+                                        <!-- Transaction records will be displayed here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Transaction Records and Reports -->
+                </div>
+            </blockquote>
+        </div>
+
+        <div class="DivBG">
+            <div class="container-fluid bg-3 text-center">
+                <h3>Sample of Best Rev.10 All Atari Catalog</h3>
+                <div class="leftB">
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <figure class="c4-A1 c4-border-cc-3 c4-image-zoom-out c4-gradient-bottom-right" tabindex="0"
+                            style="--primary-color: #4D516C ; --secondary-color:  #73799F;">
+                            <img src="tapeRecord.png" class="img-responsive" style="width:100%" alt="Image">
+                            <a href="product_info.html">
+                                <figcaption>
+                                    <div class="c4-rotate-up-right c4-delay-200">
+                                        <h4>
+                                            1010, Chelco Version
+                                        </h4>
+                                    </div>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="col-sm-3">
+                        <figure class="c4-A1 c4-border-corners-1 c4-image-zoom-out c4-gradient-bottom" tabindex="0"
+                            style="--primary-color: #4D516C; --secondary-color: #73799F;">
+                            <img src="tapeRecord2.png" class="img-responsive" style="width:92%" alt="Image">
+                            <a href="product_info2.html">
+                                <figcaption class="c4-layout-top-left">
+                                    <div class="c4-reveal-down">
+                                        <div>
+                                            <h3>1010, Sanyo Version</h3>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="col-sm-3">
+                        <figure class="c4-A1 c4-border-bottom-left c4-image-rotate-right c4-gradient-bottom-right"
+                            tabindex="0" style="--primary-color: #4D516C; --secondary-color: #73799F;">
+                            <img src="Tprinter.png" class="img-responsive" style="width:100%" alt="Image">
+                            <a href="product_info3.html">
+                                <figcaption class="c4-layout-bottom-left">
+                                    <div class="c4-reveal-right c4-delay-100">
+                                        <h3>Atari 822 Printer Thermal Head CB101726</h3>
+                                    </div>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="col-sm-3">
+                        <figure class="c4-A1 c4-border-vert c4-gradient-top c4-image-zoom-in"
+                            style="--primary-color: #4D516C; --secondary-color: #73799F;">
+                            <img src="Atari-CX85.png" class="img-responsive" style="width:100%" alt="Image">
+                            <a href="product_info4.html">
+                                <figcaption class="c4-layout-center-center">
+                                    <div class="c4-A1-title-wrapper c4-fade c4-delay-300">
+                                        <h3 class="c4-A1-title">Atari CX85 Keypad handle disk CX8139</h3>
+                                    </div>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+            </div><br>
+            <div class="container-fluid bg-3 text-center">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <figure class="c4-A1 c4-border-bottom-left c4-image-rotate-right c4-gradient-bottom-right"
+                            tabindex="0" style="--primary-color: #4D516C; --secondary-color: #73799F;">
+                            <img src="TouchTablet.png" class="img-responsive" style="width:100%" alt="Image">
+                            <a href="product_info5.html">
+                                <figcaption class="c4-layout-bottom-left">
+                                    <div class="c4-reveal-right c4-delay-100">
+                                        <h3>Atari CX77 Touch Tablet CX77</h3>
+                                    </div>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="col-sm-3">
+                        <figure class="c4-A1 c4-border-cc-3 c4-image-zoom-out c4-gradient-bottom-right" tabindex="0"
+                            style="--primary-color: #4D516C; --secondary-color:  #73799F;">
+                            <img src="RecondComputer.png" class="img-responsive" style="width:100%" alt="Image">
+                            <a href="product_info6.html">
+                                <figcaption>
+                                    <div class="c4-rotate-up-right c4-delay-200">
+                                        <h4>
+                                            Atari Reconditioned US 800XL computer CB101939RO
+                                        </h4>
+                                    </div>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="col-sm-3">
+                        <figure class="c4-A1 c4-border-vert c4-gradient-top c4-image-zoom-in"
+                            style="--primary-color: #4D516C; --secondary-color: #73799F;">
+                            <img src="floppyDisk.png" class="img-responsive" style="width:100%" alt="Image">
+                            <a href="product_info7.html">
+                                <figcaption class="c4-layout-center-center">
+                                    <div class="c4-A1-title-wrapper c4-fade c4-delay-300">
+                                        <h3 class="c4-A1-title">Atari 1050 Tandon track 00 sensor CB101148</h3>
+                                    </div>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="col-sm-3">
+                        <figure class="c4-A1 c4-border-corners-1 c4-image-zoom-out c4-gradient-bottom" tabindex="0"
+                            style="--primary-color: #4D516C; --secondary-color: #73799F;">
+                            <img src="MPI.png" class="img-responsive" style="width:100%" alt="Image">
+                            <a href="product_info8.html">
+                                <figcaption class="c4-layout-top-left">
+                                    <div class="c4-reveal-down">
+                                        <div>
+                                            <h3>Atari 810 MPI Motor CB101132</h3>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+
+
+        <div class="commentBG">
+            <div class="container-fluid bg-3 text-center">
+                <h3>Comments and Reviews on the Best Rev. 10 All Atari Catalog</h3>
+
+            </div><br>
+            <blockquote>
+                <div class="comments">
+                    <blockquote>
+                        <h4>Joel F. of MO</h4>
+                        <p>Joel visited the Best Atari Web site for the 1st time. He spotted some Atari Collector
+                            items
+                            he wanted.
+                            He also ordered Bests 228 page all Atari catalog.
+                            <i>"Thank you getting my order out so fast. I got it today and love my and collectibles!
+                                It
+                                is truly an
+                                honor owning the catalog. I cannot think of anyone
+                                who has impacted Atari in such a huge way in the same time frame that you have. I
+                                just
+                                listened to a
+                                podcast interviewing you"</i>
+                    </blockquote>
+                    </p>
+                </div>
+            </blockquote>
+            <blockquote>
+                <div class="comments">
+                    <blockquote>
+                        <h4>Boris S. of NV says:</h4>
+                        <p>On his second recent Atari order to Best. Boris picked up the Best Rev. 10 220+ page all
+                            Atari catalog.
+                            <i> "Just wanted to say thank you for servicing my recent order! The Rev 10 catalog is
+                                outstanding!
+                                I think it's more like an Atari field guide than a catalog. I love the historical
+                                background and
+                                pictures
+                                of prototype hardware! The 1040ST+ was a new one to me. I will reach out to you in a
+                                couple weeks for
+                                another
+                                order request, if that's ok with you. :)"</i>
+                    </blockquote>
+                    </p>
+                </div>
+            </blockquote>
+            <blockquote>
+                <div class="comments">
+                    <blockquote>
+                        <h4>Peter H. of New Zealand says:</h4>
+                        <p>
+                            <i> "I have to say I am most impressed with the catalog. Nirvana for anyone remotely
+                                interested in the older Atari computers etc and it’ll sit forever on my “Do NOT
+                                remove
+                                EVER” shelf … well … at least until Rev. 11 comes out <i class='far fa-smile'
+                                    style='font-size:24px'></i>"</i>
+                    </blockquote>
+                    </p>
+                </div>
+            </blockquote>
+        </div>
+        <footer>
+            <div class="content">
+                <div class="top">
+                    <div class="logo-details">
+
+                        <span class="logo_name">ATARI</span>
+                    </div>
+                    <div class="media-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <hr>
+                <div class="link-boxes">
+                    <ul class="box">
+
+                        <li><a href="A1-Dashboard-Admin.html">Home</a></li>
+                        <li><a href="Contact-Admin.html">Contact us</a></li>
+                        <li><a href="AboutUs-Admin.html">About us</a></li>
+
+                    </ul>
+                    <ul class="box">
+
+                        <li><a href="Catalog-Admin.html">Catalog</a></li>
+                        <li><a href="FAQ-Admin.html">FAQ</a></li>
+                        <li><a href="Feedback-Admin.html">Feedback</a></li>
+
+                    </ul>
+                    <ul class="box">
+
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">My account</a></li>
+                        <li><a href="#">Prefrences</a></li>
+                        <li><a href="#">Purchase</a></li>
+                    </ul>
+
+
+                </div>
+            </div>
+            <div class="bottom-details">
+                <div class="bottom_text">
+                    <span class="copyright_text">Copyright © 2024 <a href="#">Atari.</a>All rights reserved</span>
+                    <span class="policy_terms">
+                        <a href="#">Privacy policy</a>
+                        <a href="#">Terms & condition</a>
+                    </span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+       function fetchTransactions() {
+    var dateRange = $('#dateRange').val();
+    $.ajax({
+        url: 'fetch_transactions.php',
+        method: 'POST',
+        data: { period: dateRange }, // Ensure 'period' matches $_POST['period'] in PHP
+        dataType: 'html', // Since PHP script echoes HTML (table), use html dataType
+        success: function (response) {
+            $('#transactionRecords').html(response); // Display fetched data in transactionRecords div
+        },
+        error: function (xhr, status, error) {
+            console.error('Error fetching transactions:', error);
+        }
+    });
+}
+
+    </script>
+    
+    
+</body>
+
+</html>

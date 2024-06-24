@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="A1-Sytle_Dashboard-M.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="apexcharts.min.js"></script>
+    <script src="A1-DashboardAdmin_script.js"></script>
+    <title>Best Electronics Atari Hall of Fame</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('cover.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #ffdd00;
+        }
+        .product {
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .product h2 {
+            color: #ffdd00;
+        }
+        .product p {
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="A1-Dashboard-Admin.html">ATARI</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="A1-Dashboard-Admin.html">Home</a></li>
+                    <li><a href="AboutUs-Admin.html">About</a></li>
+                    <li><a href="Catalog-Admin.html">Catalog</a></li>
+                    <li><a href="Contact-Admin.html">Contact</a></li>
+                    <li><a href="Feedback-Admin.html">Feedback</a></li>
+                    <li><a href="FAQ-Admin.html">FAQs</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index_Admin_Assignment2.html">Sign Up</a></li>
+                    <li><a href="member_admin.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h1>About Us</h1>
+    <!-- Add 10 products here -->
+    <script>
+     let products = [
+            {
+                title: 'Best Atari Hall of Fame',
+                description: 'One of the main reasons why we started Best Electronics 40+ years ago, we saw a need for a company to supply Atari end users and even Atari Dealers with much needed Atari replacement parts.  Atari had their Nation wide Atari run Service Centers and their Atari authorized individual Dealer network all over the US who would service Atari products with the stock replacement Atari parts the would bring into the US.  But Atari USA would not bring in certain Atari replacement parts to fix product problems that it seems all Atari users knew about, but no other companies that sold or supported Atari products wanted to tackle.  So Best Electronics found it is niche in the Atari world back then.Best Electronics bought thousands and thousands of pallets of Atari goods out of the local Sunnyvale Atari warehouses over a 10 to 15 year period.  In theory we could run our Atari company for 15 to 30+ years on what we bought from Atari, take the easy way and only sell on E-Bay / Internet and never have to spend any more money on any new Atari Inventory.  But at Best, we strongly believe in Atari Customer Service / Support and helping our Atari customers with there Atari product problems.  We are always trying to do improvements on existing Atari products and bring in new Atari goods and upgraded Atari replacement parts for Atari users when we can.  We have seen over the years in the Atari Business other Atari companies who only tried to live off their Atari Inventory and never spend any money on new Atari Products and Inventory go the way of the Dinosaur.  Over the last 40+ years in the Atari business, Best Electronics has invested close to $100,000+ in Engineering Development costs, New tooling costs including New plastic molds, Silk Screens, test fixtures and new production processes (one time charge), to produce our Exclusive Best New Atari products, replacement parts, Atari upgrade parts and Atari product upgrades.  For a large company that amount of development costs is a drop in the bucket as far as developing new products.  For a small Atari company like Best, in a lot of cases it was a leap of faith and a long time investment in the Atari market place to invest that amount of company funds in new Atari replacement parts.  Most of the company funds we have invested in new Atari replacement and Atari upgrade products have paid off (covered all of the up front Development costs, tooling investments).  But some new Atari part sales have taken 8 to 12+ years before Best has even broke even on a new Atari replacement part or upgrade, a long time investment for us.  A very few rare cases, we will never even pay off, the development costs, new tool costs, shipping in costs on some new Atari replacement parts we have produced.  But for Best Electronics, the fact we provided Atari world wide users an impossible to find new Atari replacement part (even at a loss) that prevented that Atari user from scraping out the Atari product is very important to us.',
+            },
+            {
+               title: 'History',
+               subtitles: [
+                   {
+                       title: 'After 5+ months work, On September 17, 2022',
+                       description: ' Best is now shipping the Best Electronics exclusive <b> 2nd Generation ST / STE / Falcon Keyboard TT Touch </b> internal upgrade silicon cups and the <b> 2nd Generation XE Touch XE keyboard </b> upgrade internal silicon cups.  Check out the feed back comments of World Wide Atari owners who have upgraded their Atari made stock keyboards with the <b> Best 1st Generation ST TT Touch or 1st Generation XE Touch upgrade contacts </b> for over 20+ years now.',
+                   },
+                   {
+                       title: 'On March 9, 2020',
+                       description: ' Best started another Atari CX52 Joystick upgrade product.  After 14+ months of work, Best is now releasing a New Upgraded / Enhanced CX52 Rev. 10 <b> Gold </b> flex circuit, that cures one of the hidden problems (most experienced 5200 CX52 Joystick rebuilders do not even know about) that caused the old Carbon dot Atari CX52 Joysticks to always fail and a very very few of the Best  <b> Gold </b> CX52 Joysticks to temporally fail.  The <b> Gold </b> plating of the stock Atari CX52 Rev. 9 flex circuits has always been a 16 year headache for Best which is now cured with release of the Best designed Rev. 10 <b> Gold </b> upgraded Flex circuit.  Now all Best Reconditioned / Upgraded exchange and out right buy Atari CX52 <b> Gold </b> Joysticks in sock have now been upgraded with the New Best designed <b> State of the Art Rev. 10 Gold Flex circuits.</b> '
+                   },
+                   {
+                       title: 'On February 14, 2021',
+                       description: 'After a 3+ year search (longest in Best company history), the many many steps involved and set backs on the making of the New Best State of the Art <b> Auto Switching Atari 2600 Power supplies </b>. Now shipping. All Atari World Wide Atari CX78 JoyPad Owners!',
+                   },
+                   {
+                       title: 'On June 17, 2019',
+                       description: 'After 16+ months work, Best has released a CX78 Upgrade <b> Gold </b> Kit that will fix / cure the known Atari CX78 JoyPad problems that causes them to fail early and it also <b> Enhances / Upgrades </b> the stock Atari made <b> CX78 JoyPad features / functions!</b>. Best released another Upgraded Atari replacement part. The 16+ month story behind the making of the New 4th Best designed Upgraded / Enhanced <b> Atari CX40 Joystick replacement cable </b>. After 30+ months (2 years and 6 months, the 2nd longest in Best Company history) of work, Best is releasing the 3rd upgrade for the stock Atari made stock CX40 Joystick.  The Best 1st <b> CX40 Lifetime Gold internal PCB </b> upgrade was introduced in 2005.  2nd Best <b> CX40 Lifetime Silicone Joystick boot </b>, released in November 2016. '
+                   },
+                   {
+                       title: ' Released on August 09, 2018',
+                       description: 'The 3rd Best CX40 Upgraded / Enhanced / Beefed up Atari CX40 Joystick replacement part.  The Best Super <b> CX40 Joystick replacement handle </b>. Three New Best CX40 Joystick upgrades, 15 to 20 years after very last Atari Engineering Upgrades / Revision Changes were made to the stock Atari made CX40 Joysticks.'
+                   },
+                   {
+                       title: 'As of July 10, 2018',
+                       description: 'Best Electronics is now shipping <b> 4th Generation / Rev. 4 </b> of the Best exclusive Atari CX40 Joystick Lifetime <b> Gold </b> PCB boards.  For over 13+ years now, they have become a World Wide Upgrade board that turns the always failing (because of the stock CX40 boards) Atari CX40 Joystick into lifetime <b> Gold </b> CX40 Joystick (assuming the inner CX40 white handle is good).  Read the upgrade stats / information on the Best CX40 <b> Gold </b> PCB"s and the 110% positive feed comments from World Wide Atari / Commodore CX40 Joystick users that have installed the <b> Best CX40 Gold Upgrade boards </b>. They are even purchased direct from Best Electronics and resold on E-Bay!.Be advised of the Atari 7800 clone power supplies ($22.61 to $40.97) and the very over priced ($49.95 to $89.95) stock New and <b> Used </b> Atari made OEM 7800 Power supplies listed on E-bay / Amazon, all suffer from the same known 7800 Power supply design problems that cause them to go bad early for the last 25+ years and is one of the many reasons why Atari 7800 users are always looking for a New / Replacement 7800 Power Supply.  After 11 months of work, Best has cured these known 7800 Power supply problems with its <b> New Upgraded / Improved / Enhanced 2018 </b> Auto Switching Atari 7800 Power supply which costs less than any of the ones listed on E-Bay or Amazon and has a better / longer Atari Warranty.  Read the Best Article on the making of the New 2018 Best 7800 <b> Upgraded / Improved / Enhanced </b> Power Supply.Best Electronics is releasing its 1st upgraded Atari product for 2018.  Read about the 10 month story behind the making of the Best <b> Atari 600XL / 800XL Enhanced / Upgraded replacement Keyboard Mylar </b>',
+                    },
+                   {
+                       title: 'In 2017',
+                       description: 'After 12+ months work, Best Electronics is releasing another upgraded Atari product for 2017.  The Best 2nd Generation <b> Enhanced / Upgraded </b> Custom made 12 ft <b> Atari Composite Video Cable </b> for Atari 8 bit Computers. After 10+ months work, Best is releasing its latest Atari Upgrade part for the 35+ year Atari designed CX40 Joystick.  See why Best went back to a 1982 Atari Engineering designed CX40 part to inspire its latest <b> Upgraded / Improved CX40 Lifetime </b> replacement part. Where the average Atari company would of given up over a year and 7 months ago, looking for a replacement / upgraded Atari CX30 Paddle Pot.  Best would like to thank the hundreds and hundreds of patient world wide Atari CX30 Paddle users who have waited and inquired over and over for the last 19+ months about the status of Bests Super Pot search.  Read what Best Electronics went thru searching the world for a new <b> 2nd Generation CX30 Pot vendor </b>.  What sounds like a very easy Atari part to find, ended up being a very very long extended search (the 2nd longest in the 37 year company history) for Best Electronics. '
+                   },
+                   {
+                       title: 'In 2016',
+                       description: 'After over 8+ months work, Best is releasing its latest exclusive Atari upgrade.  It is a 2016 Upgraded / Improved / Licensed version of a bench mark / proven <b> Atari 800XL 256K Ram Upgrade </b>, 1st released in 1990. After over 6 months work, Bests New and Latest <b> Gold </b> controller Upgrade for a troubled Atari 7800 Joystick (like the Atari <b> CX40 </b> and <b> CX52 Joystick problems </b> which Best has fixed) with a shaky past.  If you liked Bests CX40 Joystick lifetime <b> Gold </b> PCB boards, Upgraded <b> Gold </b> Lifetime Atari CX40 Joysticks and Lifetime Atari 5200 CX52 <b> Gold </b> Joysticks you will love this latest <b> Atari 7800 Lifetime controller upgrade </b>. After 8 months work, Best"s latest 2016 <b> Atari 1200XL Keyboard </b> Upgraded internal replacement Mylar for an Atari keyboard with almost a 100% Failure rate!  '
+                   }
+               ]
+            }        
+        ];  
+
+        for (let i = 0; i < products.length; i++) {
+        let productDiv = document.createElement('div');
+        productDiv.className = 'product';
+        productDiv.id = 'product' + (i + 1);
+
+        let productTitle = document.createElement('h2');
+        productTitle.textContent = products[i].title;
+        productDiv.appendChild(productTitle);
+
+        let productDescription = document.createElement('p');
+        productDescription.textContent = products[i].description;
+        productDescription.style.display = 'none'; // Hide the description initially
+        productDiv.appendChild(productDescription);
+
+        if (products[i].subtitles) {
+            let subtitlesDiv = document.createElement('div');
+            subtitlesDiv.style.display = 'none'; // Hide the subtitles initially
+            for (let j = 0; j < products[i].subtitles.length; j++) {
+                let subtitle = document.createElement('h3');
+                subtitle.textContent = products[i].subtitles[j].title;
+                subtitlesDiv.appendChild(subtitle);
+
+                let subtitleDescription = document.createElement('p');
+                subtitleDescription.innerHTML = products[i].subtitles[j].description;
+                subtitlesDiv.appendChild(subtitleDescription);
+            }
+            productDiv.appendChild(subtitlesDiv);
+        }
+
+        document.body.appendChild(productDiv);
+
+        // Add interactivity
+        productTitle.addEventListener('click', function() {
+            let elements = productDiv.childNodes;
+            for (let i = 1; i < elements.length; i++) { // Start from 1 to skip the title
+                if (elements[i].style.display === 'none') {
+                    elements[i].style.display = 'block'; // Show the element when the title is clicked
+                } else {
+                    elements[i].style.display = 'none'; // Hide the element if it's already being shown
+                }
+            }
+        });
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
